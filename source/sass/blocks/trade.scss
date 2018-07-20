@@ -1,0 +1,41 @@
+.trade {
+  font-family: $montserrat;
+  padding: 100px 0;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__button {
+    display: block;
+    min-width: 261px;
+    max-width: 295px;
+    margin: 0 auto;
+    padding: 32px 25px 29px 25px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+
+    background-color: $orange;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $orange-light;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.section {
+  padding: 220px 0 60px 0;
+  background-repeat: no-repeat;
+  background-position: center 110px;
+  background-size: 63px 46px;
+
+  &--grey {
+    background-image: url('../../img/logo-gray.svg')
+  }
+
+    &--white {
+      background-color: $grey-border;
+      background-image: url('../../img/logo-white.svg')
+    }
+    &--blue {
+      color: $white;
+      background-color: $blue;
+      background-image: url('../../img/logo-blue.svg')
+    }
+}

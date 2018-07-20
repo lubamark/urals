@@ -1,0 +1,22 @@
+.social-list {
+  @include list-reset;
+  display: flex;
+  max-width: 435px;
+  min-width: 272px;
+  margin: 30px auto 40px auto;
+  justify-content: space-between;
+
+  &__link{
+    svg {
+      fill: $grey-dark;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      svg {
+        fill: $orange-light;
+      }
+    }
+  }
+}

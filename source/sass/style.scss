@@ -1,0 +1,21 @@
+//общие
+@import "global/fonts";
+@import "global/variables";
+@import "global/common";
+@import "global/mixins";
+
+//
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/main-menu";
+@import "blocks/contract";
+@import "blocks/section";
+@import "blocks/urals";
+@import "blocks/benchmark";
+@import "blocks/develop";
+@import "blocks/price";
+@import "blocks/parameters";
+@import "blocks/index";
+@import "blocks/trade";
+@import "blocks/contacts";
+@import "blocks/social-list";

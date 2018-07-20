@@ -1,0 +1,84 @@
+.main-nav {
+  .container {
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 27px 27px;
+  }
+
+  &__logo {
+    text-decoration: none;
+    font-size: 0;
+
+    svg {
+      fill: $white;
+    }
+    &--opacity svg {
+      fill: $blue-light;
+      @media screen and (min-width: $tablet-width) {
+        fill: $white;
+      }
+    }
+  }
+  &__lang {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 10px 4px 12px 4px;
+    margin-left: auto;
+    margin-right: 27px;
+
+    font-family: $roboto;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+
+    border: 2px solid rgba($white, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $orange-light;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      order: 3;
+      margin-left: 25px;
+    }
+  }
+
+  &__toggle {
+    width: 44px;
+    height: 44px;
+
+    background: transparent url('../../img/close.svg') no-repeat center center;
+
+    border: 2px solid rgba($white, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--close {
+      background-image: url('../../img/menu.svg');
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $orange-light;
+    }
+  }
+  &__menu {
+    flex-basis: 758px;
+  }
+}

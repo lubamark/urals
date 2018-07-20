@@ -1,0 +1,69 @@
+.main-menu {
+  @include list-reset;
+  height: 100vh;
+  padding-top: 50px;
+
+  &--closed {
+    display: none;
+
+    @media screen and (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: $mobile-m-width) {
+    padding-top: 80px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    height: 46px;
+    order: 0;
+    padding-top: 0;
+    margin-left: auto;
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet-width) {
+      &--active {
+        .main-menu__link::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+
+          width: 100%;
+          height: 2px;
+          background-color: $orange-light;
+        }
+      }
+    }
+  }
+  &__link {
+    position: relative;
+
+    display: block;
+    padding: 20px 0;
+
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+
+    @media screen and (min-width: $mobile-m-width) {
+      padding: 25px 0;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      padding: 12px 5px;
+    }
+  }
+}
+

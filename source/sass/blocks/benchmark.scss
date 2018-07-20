@@ -1,0 +1,32 @@
+.benchmark {
+  padding: 100px 0;
+  background-color: #E8EEF7;
+  background-image: url('../../img/benchmark/mobile_BNMRK_bck_foto@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../../img/benchmark/mobile_BNMRK_bck_foto@2x.jpg');
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 400;
+    color: $black-head;
+  }
+
+  &__content {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+  }
+}
