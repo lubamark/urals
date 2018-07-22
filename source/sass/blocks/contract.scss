@@ -7,6 +7,9 @@
   margin-top: -103px;
 
   font-family: $montserrat;
+  background-image: url('../../img/web_boat_cover.jpg');
+  background-size: cover;
+  background-position: top center;
 
   &::after {
     content: '';
@@ -17,10 +20,9 @@
 
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #005B8D 11.3%, rgba(0, 120, 188, 0) 100%), url('../../img/web_boat_cover.jpg');
+    background-image: linear-gradient(180deg, #005B8D 11.3%, rgba(0, 120, 188, 0) 100%);
     background-color: rgba(#0078BC, 0.8);
-    background-size: cover;
-    background-position: top center;
+
     background-blend-mode: multiply;
     mix-blend-mode: multiply;
   }
@@ -31,6 +33,34 @@
 
   @media screen and (min-width: $desktop-width) {
     min-height: 813px;
+  }
+
+  &__video {
+    display: none;
+
+    @media screen and (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      video {
+        height: 100%;
+        width: auto;
+        min-height: 768px;
+      }
+    }
+
+    @media screen and (min-width: $desktop-m-width) {
+      video {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__title {
