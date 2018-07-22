@@ -92,7 +92,7 @@ gulp.task("html", function () {
 
 gulp.task("jsmin", function (cb) {
   pump([
-    gulp.src(["source/js/libs/*.js", "source/js/scripts/*.js"]),
+    gulp.src(["source/js/jquery/*.js", "source/js/plugins/*.js", "source/js/scripts/*.js"]),
     uglify(),
     concat('all.js'),
     gulp.dest("build/js")
