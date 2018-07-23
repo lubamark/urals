@@ -1,10 +1,18 @@
 .index {
   font-family: $montserrat;
+
   &__part {
     margin-bottom: 60px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media screen and(min-width: $mobile-m-width) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 120px;
+      }
     }
   }
   &__title {
@@ -16,10 +24,17 @@
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and(min-width: $mobile-m-width) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 35px;
+    }
   }
 
   &__subtitle {
-    margin-bottom: 10px;
+    margin: 0 auto 20px auto;
+    max-width: 550px;
 
     font-size: 15px;
     line-height: 18px;
@@ -27,10 +42,27 @@
 
     text-align: center;
     letter-spacing: 0.5px;
+
+    @media screen and(min-width: $mobile-m-width) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     @include list-reset;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and(min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -41,6 +73,7 @@
     justify-content: center;
     min-height: 145px;
     padding-left: 80px;
+    max-width: 340px;
 
     font-family: $roboto;
     font-size: 14px;
@@ -49,7 +82,7 @@
 
     background-repeat: no-repeat;
     background-size: 62px;
-    background-position: 0 35px;
+    background-position: left center;
 
     @for $i from 1 through 3{
       &--i#{$i} {
@@ -77,6 +110,15 @@
 
     &:last-child::after {
       display: none;
+    }
+
+    @media screen and(min-width: $tablet-width) {
+      min-height: 180px;
+      flex-basis: 50%;
+
+      &:last-child::after {
+        display: block;
+      }
     }
   }
 }

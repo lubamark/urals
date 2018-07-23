@@ -3,13 +3,18 @@
   padding: 100px 0;
 
   &__title {
-    margin: 0;
-    margin-bottom: 40px;
+    max-width: 350px;
+    margin: 0 auto 55px auto;
+
 
     font-size: 30px;
     line-height: 33px;
     font-weight: 400;
     text-align: center;
+
+    @media screen and(min-width: $tablet-width) {
+      max-width: 100%;
+    }
   }
 
   &__button {

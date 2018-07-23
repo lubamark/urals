@@ -9,19 +9,37 @@
     font-size: 26px;
     line-height: 29px;
     font-weight: 400;
+
+    @media screen and(min-width: $mobile-m-width) {
+      margin-bottom: 40px;
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    @media screen and(min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     @include list-reset;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+
+    @media screen and(min-width: $tablet-width) {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     position: relative;
 
     min-height: 195px;
-    padding-left: 80px;
-    padding-bottom: 30px;
-    padding-top: 25px;
+    padding: 30px 0 30px 80px;
 
     font-size: 20px;
     line-height: 24px;
@@ -31,27 +49,26 @@
     span,
     small {
       display: block;
-      margin-bottom: 10px;
 
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase;
 
     }
-
     span {
+      margin-bottom: 20px;
+
       color: $grey-text;
     }
-
     small {
-      margin-top: 30px;
+      margin-top: 20px;
       color: $grey-dark
 
     }
 
     &--contract,
     &--export {
-      background-position: 0 35px;
+      background-position: 0 50px;
       background-repeat: no-repeat;
       background-size: 62px;
     }
@@ -61,8 +78,7 @@
     &--export {
       background-image: url('../../img/param/icon-export.svg') ;
     }
-
-    &:nth-child(n + 2)::after {
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -72,22 +88,46 @@
       height: 2px;
       background-color: rgba($grey-text, 0.5);
     }
-
+    &:first-child::after,
+    &:last-child::after {
+      display: none;
+    }
     &:nth-child(n + 3) {
-      padding-top: 40px;
-      min-height: 195px;
-
       font-size: 30px;
       line-height: 37px;
       span {
         margin-bottom: 17px;
       }
-
       &:last-child::after {
         display: none;
       }
     }
 
+    @media screen and (min-width: $mobile-m-width) {
+      &:nth-child(n + 3) {
+        font-size: 40px;
+        line-height: 49px;
+      }
+    }
+    @media screen and(min-width: $tablet-width) {
+      max-width: 320px;
+      flex-basis: 50%;
+      min-height: 223px;
+
+      &:nth-child(2n + 1) {
+        margin-right: 20px;
+      }
+      &--contract,
+      &--export {
+        background-position: 0 60px;
+      }
+      &:first-child::after {
+        display: block;
+      }
+      &:nth-child(5)::after {
+        display: none;
+      }
+    }
 
   }
 }

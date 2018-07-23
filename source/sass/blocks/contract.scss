@@ -51,7 +51,7 @@
       video {
         height: 100%;
         width: auto;
-        min-height: 768px;
+        min-height: 768px !important;
       }
     }
 
@@ -115,9 +115,20 @@
     height: 57px;
 
     background-color: transparent;
-    background-image: url('../../img/arrow_icon.svg');
     border: none;
     cursor: pointer;
+
+    svg {
+      fill: #89A0B3;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      svg {
+        fill: $orange-light;
+      }
+    }
   }
 
 

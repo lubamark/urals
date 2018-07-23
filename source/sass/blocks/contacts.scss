@@ -70,13 +70,5 @@
 
   [class*="ymaps-2"][class*="-ground-pane"] {
     filter: grayscale(100%);
-    /* Chrome 19+ & Safari 6+ */
   }
-
-  .ymaps-2-1-66-balloon__close+.ymaps-2-1-66-balloon__content {
-    font-family: $montserrat;
-    background-color: rgba($white, 0.5);
-  }
-
-
 }

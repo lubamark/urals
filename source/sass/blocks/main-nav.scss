@@ -10,17 +10,27 @@
     padding: 27px 27px;
   }
 
+  @media screen and(min-width: $tablet-width) {
+    background-color: $blue;
+    &--fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+  }
+
   &__logo {
     text-decoration: none;
     font-size: 0;
 
-    svg {
-      fill: $white;
-    }
-    &--opacity svg {
-      fill: $blue-light;
+    &--opacity {
+      opacity: 0.3;
+
       @media screen and (min-width: $tablet-width) {
-        fill: $white;
+        opacity: 1;
+
       }
     }
   }

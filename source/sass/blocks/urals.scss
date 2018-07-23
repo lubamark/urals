@@ -1,6 +1,7 @@
 .urals {
+
   &__title {
-    margin: 0;
+    margin: 0 auto 25px auto;
     padding: 0 20px;
 
     font-family: $montserrat;
@@ -11,14 +12,39 @@
     color: $black;
 
     @media screen and(min-width: $mobile-m-width) {
-      br {
-        display: none;
-      }
+      font-size: 30px;
+      line-height: 33px;
+      margin-bottom: 30px;
     }
+
+    @media screen and(min-width: $tablet-width) {
+      max-width: 560px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and(min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and(min-width: $desktop-m-width) {
+      margin-bottom: 70px;
+    }
+
   }
 
   &__list {
     @include list-reset;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+
+    @media screen and(min-width: $tablet-width) {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   &__item {
@@ -27,7 +53,7 @@
     padding-bottom: 35px;
     padding-top: 27px;
 
-    background-position: 0 35px;
+    background-position: 0 20px;
     background-repeat: no-repeat;
     background-size: 62px;
 
@@ -41,19 +67,33 @@
       height: 2px;
       background-color: $grey-border;
     }
-
+    &:last-child::after {
+      display: none;
+    }
     &--scale {
-      background-image: url('../../img/urals/icon-scale.svg') ;
+      background-image: url('../../img/urals/icon-scale.svg');
     }
     &--export {
-      background-image: url('../../img/urals/icon-export.svg') ;
+      background-image: url('../../img/urals/icon-export.svg');
     }
     &--structure {
-      background-image: url('../../img/urals/icon-structure.svg') ;
+      background-image: url('../../img/urals/icon-structure.svg');
+    }
+
+    @media screen and(min-width: $tablet-width) {
+      flex-basis: 50%;
+      padding-bottom: 20px;
+      padding-top: 15px;
+      background-position: 0 10px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
   &__subtitle {
+    margin: 0;
     font-size: 15px;
     line-height: 16px;
     font-weight: 500;
@@ -63,15 +103,30 @@
 
     @media screen and(min-width: $mobile-m-width) {
       max-width: 100%;
+      min-height: 48px;
+    }
+    @media screen and(min-width: $tablet-width) {
+      position: relative;
+      margin-bottom: 40px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+
+        width: 166px;
+        height: 2px;
+        background-color: $grey-border;
+      }
     }
   }
 
   &__content {
+    font-family: $roboto;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
     color: $grey-text;
   }
-
-
 }

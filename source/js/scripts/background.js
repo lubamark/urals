@@ -10,5 +10,4 @@ $(document).ready(function() {
     "autoplay": true,
     "loop": true
   });
-  console.log('im done')
 });
