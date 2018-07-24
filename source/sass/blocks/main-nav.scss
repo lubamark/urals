@@ -19,6 +19,8 @@
       left: 0;
       width: 100%;
       z-index: 100;
+
+      animation: nav-fix 0.4s ease-out;
     }
   }
 
@@ -95,6 +97,12 @@
   &__menu {
     flex-basis: 758px;
   }
+}
+
+@keyframes nav-fix {
+  0% {top: -105px;}
+  50% {top: -50px; }
+  100% {top: 0; }
 }
 
 

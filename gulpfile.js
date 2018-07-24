@@ -49,7 +49,7 @@ gulp.task("serve", function() {
   gulp.watch("source/*.html").on("change", server.reload);
   gulp.watch("source/img/**/*.{png,jpg,svg}", ["copy"]);
   gulp.watch("source/img/**/*.{png,jpg,svg}").on("change", server.reload);
-  gulp.watch("source/js/*.js", ["jsmin"]);
+  gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/js/*.js").on("change", server.reload);
 
 });
