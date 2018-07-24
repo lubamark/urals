@@ -3,7 +3,9 @@
   height: 100vh;
   padding-top: 50px;
 
-  &--closed {
+
+
+  &._closed {
     display: none;
 
     @media screen and (min-width: $tablet-width) {
@@ -48,7 +50,8 @@
     @media screen and (min-width: $tablet-width) {
       padding: 12px 5px;
 
-      &--active::after {
+      &:hover::after,
+      &._active::after {
         content: '';
         position: absolute;
         left: 0;

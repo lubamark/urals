@@ -11,8 +11,11 @@ body {
   font-size: 18px;
   line-height: normal;
   color: #000;
-  width: 100vw;
-  height: 100vh;
+
+  &._menu-mobile {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 *, *::before, *::after {

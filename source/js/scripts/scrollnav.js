@@ -1,35 +1,47 @@
-function onScroll(n) {
-  var t = $(document).scrollTop();
-  $(".main-menu__link").each(function () {
-    var n = $(this);
-    $(n.attr("href")).position().top - 150 <= t ? ($(".main-menu__link").removeClass("main-menu__link--active"),
-      n.addClass("main-menu__link--active")) : (n.removeClass("main-menu__link--active"), n.blur())
-  })
-}
-
 $(document).ready(function () {
-  $(document).on("scroll", onScroll), $('.main-menu__link[href^="#"]').on("click", function (n) {
-    n.preventDefault(),
-      $(document).off("scroll"), $(".main-menu__link").each(function () {
-        $(this).removeClass("main-menu__link--active")
-    }),
-      $(this).addClass("main-menu__link--active");
+  var link = $('.js-scroll-link');
+  $(document).on("scroll.menu", onScroll);
 
-    var t = this.hash;
-    $target = $(t), $("html, body").stop().animate({scrollTop: $target.offset().top - 90}, 500, "swing", function () {
-      $(document).on("scroll", onScroll)
-    })
-  })
+  //smoothscroll
+  link.on('click', function (e) {
+    if(!$(this).hasClass('_active')) {
+      link.removeClass('_active');
+      $(this).addClass('_active');
+    }
+    var target = this.hash,
+      $target = $(target);
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top - 98
+    }, 500, function () {
+    });
+  });
 });
 
+function onScroll(event){
+  var link = $('.js-scroll-link');
+  var scrollPos = $(document).scrollTop();
+
+  link.each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.offset().top - 100 <= scrollPos && refElement.offset().top + refElement.height() > scrollPos) {
+     link.removeClass("_active");
+      currLink.addClass("_active");
+      window.location.hash = currLink.attr("href");
+    }
+    else{
+      currLink.removeClass("_active");
+    }
+  });
+}
+
 $(function () {
-  $(window).scroll(function(event) {
-    if($(this).scrollTop() > 550) {
-      $(".main-nav").fadeIn();
-      $(".main-nav").addClass('main-nav--fixed')
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 600) {
+      $('.js-nav').fadeIn().addClass('_fixed');
     }
     else {
-      $(".main-nav").removeClass('main-nav--fixed')
+      $('.js-nav').removeClass('_fixed')
     }
   });
 });

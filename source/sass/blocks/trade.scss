@@ -36,11 +36,12 @@
     background-color: $orange;
     border: none;
     cursor: pointer;
+    transition: background-color 0.6s ease;
 
     &:hover,
     &:focus,
     &:active {
-      background-color: $orange-light;
+      background-color: $blue;
     }
   }
 }

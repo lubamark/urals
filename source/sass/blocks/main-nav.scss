@@ -1,4 +1,5 @@
 .main-nav {
+
   .container {
     position: relative;
     z-index: 10;
@@ -10,10 +11,10 @@
     padding: 27px 27px;
   }
 
-  @media screen and(min-width: $tablet-width) {
-    background-color: $blue;
-    &--fixed {
+  &._fixed {
+    @media screen and(min-width: $tablet-width) {
       position: fixed;
+      background-color: $blue;
       top: 0;
       left: 0;
       width: 100%;
@@ -21,16 +22,19 @@
     }
   }
 
+  &._blue {
+    background-color: $blue;
+  }
+
   &__logo {
     text-decoration: none;
     font-size: 0;
 
-    &--opacity {
+    &._opacity {
       opacity: 0.3;
 
       @media screen and (min-width: $tablet-width) {
         opacity: 1;
-
       }
     }
   }
@@ -75,7 +79,7 @@
     border-radius: 50%;
     cursor: pointer;
 
-    &--close {
+    &._close {
       background-image: url('../../img/menu.svg');
     }
 
@@ -92,3 +96,5 @@
     flex-basis: 758px;
   }
 }
+
+
