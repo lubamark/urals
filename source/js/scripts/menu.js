@@ -15,7 +15,6 @@ $(document).ready(function () {
     $('.js-logo').toggleClass('_opacity');
     $('.js-scroll-menu').toggleClass('_closed');
     $('body').toggleClass('_menu-mobile');
-    console.log('haha');
   }
   function onScroll(evt){
     var link = $('.js-scroll-link');
@@ -46,6 +45,9 @@ $(document).ready(function () {
   });
 
   closeMenu();
+  $('.js-nav-toggle').click(function () {
+    toggleMenu();
+  });
 
   var windowWidth = $(window).width();
   $(window).resize(function () {
@@ -53,9 +55,6 @@ $(document).ready(function () {
   });
 
   if(windowWidth <= 1024) {
-    $('.js-nav-toggle').click(function () {
-      toggleMenu();
-    });
 
     $.each(link, function() {
       $(this).click(function () {
