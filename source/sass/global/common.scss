@@ -15,8 +15,8 @@ body {
     height: 640px;
     overflow: hidden;
   }
-
 }
+
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -25,6 +25,12 @@ body {
 *:hover {
   outline: none;
 }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .hidden {
   display: none;
 }

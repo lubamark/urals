@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
   var link = $('.js-scroll-link');
+  var windowWidth = $(window).width();
+
   function closeMenu () {
     $('.js-nav-toggle').addClass('_close');
     $('.js-nav').removeClass('_blue');
@@ -43,7 +45,7 @@ $(document).ready(function () {
   });
 
   function onScroll(){
-    var link = $('.js-scroll-link');
+
     var scrollPos = $(document).scrollTop();
 
     link.each(function () {
@@ -56,6 +58,7 @@ $(document).ready(function () {
       }
       else if (scrollPos < 640) {
         unhash();
+        link.removeClass('_active');
       }
       else{
         currLink.removeClass("_active");
@@ -102,11 +105,22 @@ $(document).ready(function () {
     var target = window.location.hash,
       $target = $('[data-id="'+target.substring(1)+'"]');
     if($target.length > 0) {
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top - 98
-      }, 500, function () {
-      });
+      if(windowWidth <= 1024) {
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+          }, 500, function () {
+          });
+      } else {
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top - 98
+        }, 500, function () {
+        });
+      }
+
     }
+
+
+
   });
 
   $(window).scroll(function() {
@@ -124,7 +138,7 @@ $(document).ready(function () {
     toggleMenu();
   });
 
-  var windowWidth = $(window).width();
+
   menuClick(windowWidth);
   $(window).resize(function () {
     windowWidth = $(window).width();

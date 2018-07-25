@@ -9,6 +9,7 @@
   &__link{
     svg {
       fill: $grey-dark;
+      transition: fill 0.6s ease;
     }
 
     &:hover,
