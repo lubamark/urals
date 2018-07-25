@@ -5,29 +5,29 @@
   background-position: center 100px,top left;
 
   &--grey {
-    background-image: url('../../img/logo-gray.svg');
+    background-image: url('../img/logo-gray.svg');
     background-size: 63px 46px;
   }
 
   &--white {
-    background-image: url('../../img/logo-white.svg'), url("../../img/price/OPD_bck_foto__480.jpg");
+    background-image: url('../img/logo-white.svg'), url("../img/price/OPD_bck_foto__480.jpg");
     background-size: 63px 46px, cover;
 
     @media screen and (min-width: $tablet-width) {
-      background-image: url('../../img/logo-white.svg'), url('../../img/price/OPD_bck_foto__1024.jpg');
+      background-image: url('../img/logo-white.svg'), url('../img/price/OPD_bck_foto__1024.jpg');
     }
 
     @media screen and (min-width: $desktop-m-width) {
-      background-image: url('../../img/logo-white.svg'), url('../../img/price/OPD_bck_foto__1440.jpg');
+      background-image: url('../img/logo-white.svg'), url('../img/price/OPD_bck_foto__1440.jpg');
     }
 
     @media screen and (min-width: $desktop-l-width) {
-      background-image: url('../../img/logo-white.svg'), url('../../img/price/OPD_bck_foto__1920.jpg');
+      background-image: url('../img/logo-white.svg'), url('../img/price/OPD_bck_foto__1920.jpg');
     }
   }
   &--blue {
     color: $white;
     background-color: $blue;
-    background-image: url('../../img/logo-blue.svg')
+    background-image: url('../img/logo-blue.svg')
   }
 }

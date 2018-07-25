@@ -3,21 +3,21 @@
 
   font-family: $montserrat;
   background-color: #E8EEF7;
-  background-image: url('../../img/benchmark/BNMRK_bck_foto_480.jpg');
+  background-image: url('../img/benchmark/BNMRK_bck_foto_480.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
 
   @media screen and(min-width: $tablet-width) {
     padding: 110px 0;
-    background-image: url('../../img/benchmark/BNMRK_bck_foto_1024.jpg');
+    background-image: url('../img/benchmark/BNMRK_bck_foto_1024.jpg');
   }
   @media screen and(min-width: $desktop-m-width) {
     padding: 115px 0;
-    background-image: url('../../img/benchmark/BNMRK_bck_foto_1440.jpg');
+    background-image: url('../img/benchmark/BNMRK_bck_foto_1440.jpg');
   }
   @media screen and(min-width: $desktop-l-width) {
-    background-image: url('../../img/benchmark/BNMRK_bck_foto_1920.jpg');
+    background-image: url('../img/benchmark/BNMRK_bck_foto_1920.jpg');
   }
 
   &__title {

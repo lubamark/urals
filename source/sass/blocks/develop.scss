@@ -51,15 +51,15 @@
     }
 
     &:first-child::after {
-      background-image: url('../../img/develop/arrow-l.svg');
+      background-image: url('../img/develop/arrow-l.svg');
     }
 
     &:nth-child(2)::after {
-      background-image: url('../../img/develop/arrow-m.svg');
+      background-image: url('../img/develop/arrow-m.svg');
     }
 
     &:nth-child(3)::after {
-      background-image: url('../../img/develop/arrow-d.svg');
+      background-image: url('../img/develop/arrow-d.svg');
     }
 
     @media screen and(min-width: $mobile-m-width) {

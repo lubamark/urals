@@ -5,6 +5,7 @@
     margin: 0;
     margin-bottom: 25px;
 
+    font-family: $montserrat;
     text-align: center;
     font-size: 26px;
     line-height: 29px;
@@ -73,10 +74,10 @@
       background-size: 62px;
     }
     &--contract {
-      background-image: url('../../img/param/icon-contract.svg') ;
+      background-image: url('../img/param/icon-contract.svg') ;
     }
     &--export {
-      background-image: url('../../img/param/icon-export.svg') ;
+      background-image: url('../img/param/icon-export.svg') ;
     }
     &::after {
       content: '';

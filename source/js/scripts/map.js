@@ -1,4 +1,4 @@
-var myPlacemark, myMap, myBaloon;
+var myPlacemark, myMap;
 var map = 'yandex-map';
 var address = 'Улица Тимура Фрунзе, 24';
 
@@ -25,7 +25,9 @@ ymaps.ready(function () {
     }
   );
 
-
   myMap.geoObjects.add(myPlacemark);
   myMap.behaviors.disable('scrollZoom');
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    myMap.behaviors.disable('drag');
+  }
 });

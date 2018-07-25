@@ -12,7 +12,6 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
-var svgmin = require('gulp-svgmin');
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
@@ -93,7 +92,7 @@ gulp.task("html", function () {
 gulp.task("jsmin", function (cb) {
   pump([
     gulp.src(["source/js/jquery/*.js", "source/js/plugins/*.js", "source/js/scripts/*.js"]),
-    uglify(),
+    // uglify(),
     concat('all.js'),
     gulp.dest("build/js")
   ],

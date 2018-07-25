@@ -3,7 +3,6 @@ body {
   padding: 0;
   position: relative;
   min-width: $mobile-width;
-  min-height: 300px;
   box-sizing: border-box;
 
   font-family: 'Montserrat', Arial, sans-serif;
@@ -13,9 +12,10 @@ body {
   color: #000;
 
   &._menu-mobile {
-    height: 100vh;
+    height: 640px;
     overflow: hidden;
   }
+
 }
 
 *, *::before, *::after {

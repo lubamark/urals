@@ -6,6 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>URALS</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <div class="hidden">
   <include src="build/img/sprite.svg"></include>
@@ -16,7 +25,7 @@
       <a class="main-nav__logo js-logo">
         <img src="img/logo-white.svg" alt="Urals" width="63" height="46">
       </a>
-      <a href="/en.html" class="main-nav__lang">en</a>
+      <a href="en.html" class="main-nav__lang">en</a>
       <button type="button" class="main-nav__toggle js-nav-toggle">
         <span class="visually-hidden">Меню</span>
       </button>
@@ -32,9 +41,9 @@
   </nav>
 </header>
 <main>
-  <section class="contract" id="contract">
+  <section class="contract" data-id="contract">
     <div class="contract__video">
-      <video class="player__video" autoplay preload="auto" loop>
+      <video class="player__video" autoplay preload=metadata" loop>
         <source src="img/video/boat_classic.mp4" type="video/mp4">
       </video>
     </div>
@@ -45,19 +54,18 @@
       <p class="contract__subtitle">
         Новый механизм ценообразования
       </p>
-      <button type="button" class="contract__button">
-
+      <a href="#urals" class="contract__button js-down-button">
         <span class="visually-hidden">down</span>
         <svg width="62" height="57" role="img">
-          <use xlink:href="img/sprite.svg#arrow_icon"></use>
+          <use xlink:href="#arrow_icon"></use>
         </svg>
-      </button>
+      </a>
     </div>
   </section>
-  <section class="section section--grey urals" id="urals">
+  <section class="section section--grey urals" data-id="urals">
     <div class="container">
       <h2 class="urals__title">
-        URALS — идеальный претендент на&nbspстатус эталонного сорта
+        URALS — идеальный претендент на&nbsp;статус эталонного сорта
       </h2>
       <ul class="urals__list">
         <li class="urals__item urals__item--scale">
@@ -83,7 +91,7 @@
       </ul>
     </div>
   </section>
-  <section class="benchmark" id="benchmark">
+  <section class="benchmark" data-id="benchmark">
     <div class="container">
       <h2 class="benchmark__title">
         Бенчмарк
@@ -93,7 +101,7 @@
       </p>
     </div>
   </section>
-  <section class="section section--grey development" id="development">
+  <section class="section section--grey development" data-id="development">
     <div class="container">
       <h2 class="develop__title">
         Развитие проекта
@@ -115,7 +123,7 @@
       </ul>
     </div>
   </section>
-  <section class="section section--white price" id="price">
+  <section class="section section--white price" data-id="price" >
     <div class="container">
       <h2 class="price__title">
         Ценообразование нефти на&nbsp;основе цены фьючерса — мировой стандарт
@@ -145,7 +153,7 @@
       </ul>
     </div>
   </section>
-  <section class="parameters section section--grey" id="parameters">
+  <section class="parameters section section--grey" data-id="parameters">
     <div class="container">
       <h2 class="parameters__title">
         Параметры фьючерсных контрактов на&nbsp;нефть URALS на&nbsp;СПбМТСБ
@@ -182,7 +190,7 @@
       </ul>
     </div>
   </section>
-  <section class="section section--blue index" id="index">
+  <section class="section section--blue index" data-id="index">
     <div class="container">
       <div class="index__part">
         <h3 class="index__title">urals index</h3>
@@ -226,8 +234,8 @@
 </main>
 <footer class="page-footer">
   <section class="contacts" id="contacts">
+    <h2 class="visually-hidden">Контакты</h2>
     <div class="contacts__map" id="yandex-map">
-
     </div>
     <div class="container">
       <div class="contacts__block">
@@ -244,7 +252,7 @@
         <a href="#" class="social-list__link">
           <span class="visually-hidden">Сайт</span>
           <svg width="40" height="40" role="img">
-            <use xlink:href="img/sprite.svg#icon-website"></use>
+            <use xlink:href="#icon-website"></use>
           </svg>
         </a>
       </li>
@@ -252,7 +260,7 @@
         <a href="#" class="social-list__link">
           <span class="visually-hidden">Вконтакте</span>
           <svg width="40" height="40" role="img">
-            <use xlink:href="img/sprite.svg#icon-vk"></use>
+            <use xlink:href="#icon-vk"></use>
           </svg>
         </a>
       </li>
@@ -260,7 +268,7 @@
         <a href="#" class="social-list__link">
           <span class="visually-hidden">Facebook</span>
           <svg width="40" height="40" role="img">
-            <use xlink:href="img/sprite.svg#icon-fb"></use>
+            <use xlink:href="#icon-fb"></use>
           </svg>
         </a>
       </li>
@@ -268,7 +276,7 @@
         <a href="#" class="social-list__link">
           <span class="visually-hidden">Linked In</span>
           <svg width="40" height="40" role="img">
-            <use xlink:href="img/sprite.svg#icon-linked"></use>
+            <use xlink:href="#icon-linked"></use>
           </svg>
         </a>
       </li>
@@ -276,7 +284,7 @@
         <a href="#" class="social-list__link">
           <span class="visually-hidden">Tweeter</span>
           <svg width="40" height="40" role="img">
-            <use xlink:href="img/sprite.svg#icon-tweeter"></use>
+            <use xlink:href="#icon-tweeter"></use>
           </svg>
         </a>
       </li>

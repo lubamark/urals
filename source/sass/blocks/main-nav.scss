@@ -17,6 +17,7 @@
       background-color: $blue;
       top: 0;
       left: 0;
+      right: 0;
       width: 100%;
       z-index: 100;
 
@@ -25,10 +26,19 @@
   }
 
   &._blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
     background-color: $blue;
+    overflow: auto;
   }
 
   &__logo {
+    height: 46px;
+
     text-decoration: none;
     font-size: 0;
 
@@ -75,14 +85,14 @@
     width: 44px;
     height: 44px;
 
-    background: transparent url('../../img/close.svg') no-repeat center center;
+    background: transparent url('../img/close.svg') no-repeat center center;
 
     border: 2px solid rgba($white, 0.5);
     border-radius: 50%;
     cursor: pointer;
 
     &._close {
-      background-image: url('../../img/menu.svg');
+      background-image: url('../img/menu.svg');
     }
 
     @media screen and (min-width: $tablet-width) {
@@ -95,7 +105,12 @@
     }
   }
   &__menu {
-    flex-basis: 758px;
+    flex-basis: 100%;
+
+    @media screen and (min-width: $tablet-width) {
+      flex-basis: 758px;
+    }
+
   }
 }
 

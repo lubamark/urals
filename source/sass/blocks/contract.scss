@@ -4,7 +4,6 @@
   top: -100px;
   left: 0;
   right: 0;
-  z-index: -10;
   margin-bottom: -100px;
 
   min-height: 640px;
@@ -13,15 +12,24 @@
 
 
   font-family: $montserrat;
-  background-image: url('../../img/web_boat_cover.jpg');
+  background-image: url('../img/web_boat_cover_mobile.jpg');
   background-size: cover;
   background-position: top center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet-width) {
+    background-image: url('../img/web_boat_cover_middle.jpg');
+  }
+
+  @media screen and (min-width: $desktop-l-width) {
+    background-image: url('../img/web_boat_cover.jpg');
+  }
 
 
   &::after {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     top: 0;
     left: 0;
 
@@ -120,6 +128,9 @@
   }
 
   &__button {
+    position: relative;
+    z-index: 10;
+
     display: block;
     margin: 0 auto;
     width: 62px;

@@ -71,13 +71,13 @@
       display: none;
     }
     &--scale {
-      background-image: url('../../img/urals/icon-scale.svg');
+      background-image: url('../img/urals/icon-scale.svg');
     }
     &--export {
-      background-image: url('../../img/urals/icon-export.svg');
+      background-image: url('../img/urals/icon-export.svg');
     }
     &--structure {
-      background-image: url('../../img/urals/icon-structure.svg');
+      background-image: url('../img/urals/icon-structure.svg');
     }
 
     @media screen and(min-width: $tablet-width) {

@@ -86,13 +86,13 @@
 
     @for $i from 1 through 3{
       &--i#{$i} {
-        background-image: url('../../img/index/icon-index#{$i}.svg') ;
+        background-image: url('../img/index/icon-index#{$i}.svg') ;
       }
     }
 
     @for $i from 1 through 2{
       &--c#{$i} {
-        background-image: url('../../img/index/icon-cfd#{$i}.svg') ;
+        background-image: url('../img/index/icon-cfd#{$i}.svg') ;
       }
     }
 

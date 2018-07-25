@@ -67,7 +67,7 @@
 
     @for $i from 1 through 6{
       &--op#{$i} {
-        background-image: url('../../img/price/OP#{$i}_icon.svg') ;
+        background-image: url('../img/price/OP#{$i}_icon.svg') ;
       }
     }
 
