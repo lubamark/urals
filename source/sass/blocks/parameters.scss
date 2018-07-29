@@ -9,6 +9,12 @@
     background-position: center 125px,top left;
   }
 
+  @media screen and(min-width: $desktop-width) {
+    padding-top: 225px;
+    padding-bottom: 60px;
+    background-position: center 110px,top left;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 25px;
@@ -27,6 +33,13 @@
 
     @media screen and(min-width: $tablet-width) {
       margin-bottom: 65px;
+    }
+
+    @media screen and(min-width: $desktop-width) {
+      margin-bottom: 33px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -150,6 +163,13 @@
       }
       &:nth-child(5)::after {
         display: none;
+      }
+    }
+    @media screen and(min-width: $desktop-width) {
+      max-width: 360px;
+      padding-left: 95px;
+      &::after {
+        left: 95px;
       }
     }
 

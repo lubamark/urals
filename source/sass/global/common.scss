@@ -59,12 +59,9 @@ a {
   }
 
   @media screen and (min-width: $desktop-width) {
-    max-width: 740px;
+    max-width: 750px;
   }
 
-  @media screen and (min-width: $desktop-m-width) {
-    max-width: 800px;
-  }
 
   @media screen and (min-width: $desktop-l-width) {
     max-width: 940px;

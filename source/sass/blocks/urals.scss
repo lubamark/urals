@@ -21,15 +21,6 @@
       max-width: 560px;
       margin-bottom: 70px;
     }
-
-    @media screen and(min-width: $desktop-width) {
-      margin-bottom: 50px;
-    }
-
-    @media screen and(min-width: $desktop-m-width) {
-      margin-bottom: 70px;
-    }
-
   }
 
   &__list {
@@ -96,9 +87,16 @@
 
         }
       }
-
       &::after {
         display: none;
+      }
+    }
+    @media screen and(min-width: $desktop-width) {
+      padding-left: 95px;
+      margin-bottom: 50px;
+      max-width: 360px;
+      &::after {
+        left: 95px;
       }
     }
   }
@@ -133,6 +131,12 @@
         height: 2px;
         background-color: $grey-border;
       }
+    }
+
+    @media screen and(min-width: $desktop-width) {
+      max-width: 280px;
+      min-height: 51px;
+      margin-bottom: 40px;
     }
   }
 

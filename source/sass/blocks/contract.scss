@@ -16,10 +16,19 @@
   background-repeat: no-repeat;
 
   @media screen and (min-width: $tablet-width) {
+    min-height: 768px;
     background-image: url('../img/web_boat_cover_middle.jpg');
+
+    .container {
+      max-width: 940px;
+    }
+  }
+  @media screen and (min-width: $desktop-width) {
+    min-height: 813px;
   }
 
   @media screen and (min-width: $desktop-l-width) {
+    min-height: 940px;
     background-image: url('../img/web_boat_cover.jpg');
   }
 
@@ -35,24 +44,8 @@
     height: 100%;
     background: linear-gradient(to bottom, #061D39 0%, #00417E 88.56%), rgba(0, 120, 188, 0.9);
     opacity: 0.76;
-
-    //background-blend-mode: multiply;
-    //mix-blend-mode: multiply;
   }
 
-  @media screen and (min-width: $tablet-width) {
-    min-height: 768px;
-
-    .container {
-      max-width: 940px;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    min-height: 813px;
-
-
-  }
 
   &__video {
     display: none;
@@ -100,8 +93,8 @@
       line-height: 44px;
     }
 
-    @media screen and (min-width: $desktop-width) {
-      margin: 230px 0 120px 0;
+    @media screen and (min-width: $desktop-l-width) {
+      margin-top: 270px;
     }
   }
 
@@ -125,7 +118,11 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-      margin-bottom: 140px;
+      margin-bottom: 165px;
+    }
+
+    @media screen and (min-width: $desktop-l-width) {
+      margin-bottom: 225px;
     }
   }
 

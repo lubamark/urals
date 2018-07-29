@@ -109,13 +109,11 @@
         background-image: url('../img/index/icon-index#{$i}.svg') ;
       }
     }
-
     @for $i from 1 through 2{
       &--c#{$i} {
         background-image: url('../img/index/icon-cfd#{$i}.svg') ;
       }
     }
-
     &::after {
       content: '';
       position: absolute;
@@ -126,7 +124,6 @@
       height: 2px;
       background-color: $blue-light;
     }
-
     &:last-child::after {
       display: none;
     }
@@ -142,6 +139,13 @@
 
       &:last-child::after {
         display: block;
+      }
+    }
+    @media screen and (min-width: $desktop-width) {
+      padding-left: 95px;
+      max-width: 360px;
+      &::after {
+        left: 95px;
       }
     }
   }

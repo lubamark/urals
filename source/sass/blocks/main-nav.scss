@@ -81,6 +81,14 @@
       margin-left: 35px;
       margin-right: 0;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-left: 85px;
+    }
+
+    @media screen and (min-width: $desktop-l-width) {
+      margin-left: 160px;
+    }
   }
 
   &__toggle {
@@ -112,6 +120,10 @@
 
     @media screen and (min-width: $tablet-width) {
       flex-basis: 740px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      flex-basis: 850px;
     }
   }
 }

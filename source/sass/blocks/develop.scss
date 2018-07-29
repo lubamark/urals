@@ -10,6 +10,15 @@
     background-position: center 105px,top left;
   }
 
+  @media screen and (min-width: $desktop-m-width) {
+    padding-top: 230px;
+  }
+
+  @media screen and (min-width: $desktop-l-width) {
+    padding-bottom: 120px;
+  }
+
+
 
   &__title {
     margin: 0;
