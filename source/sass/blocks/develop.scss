@@ -1,10 +1,19 @@
 .develop {
   font-family: $montserrat;
+  @media screen and (min-width: $mobile-m-width) {
+    padding-top: 230px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 220px;
+    padding-bottom: 60px;
+    background-position: center 105px,top left;
+  }
 
 
   &__title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding: 0;
 
     font-size: 26px;
@@ -15,19 +24,24 @@
     @media screen and (min-width: $mobile-m-width) {
       font-size: 30px;
       line-height: 37px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin-bottom: 5px;
     }
   }
   &__line {
     @include list-reset;
     margin-left: auto;
     margin-right: auto;
-    max-width: 600px;
+    max-width: 450px;
   }
 
   &__point {
     position: relative;
 
-    padding: 30px 0;
+    padding: 40px 0 40px 0;
     line-height: 18px;
     font-size: 15px;
     text-align: center;
@@ -41,11 +55,11 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: -15px;
-      left: calc(50% - 15px);
+      bottom: -20px;
+      left: calc(50% - 20px);
 
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -74,7 +88,7 @@
     font-size: 12px;
 
     @media screen and(min-width: $tablet-width) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 }

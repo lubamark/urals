@@ -9,8 +9,6 @@
   min-height: 640px;
   padding-top: 103px;
 
-
-
   font-family: $montserrat;
   background-image: url('../img/web_boat_cover_mobile.jpg');
   background-size: cover;
@@ -117,6 +115,10 @@
     text-align: center;
     text-transform: uppercase;
     color: $white;
+
+    @media screen and (min-width: $mobile-m-width) {
+      margin-bottom: 95px;
+    }
 
     @media screen and (min-width: $tablet-width) {
       margin-bottom: 130px;

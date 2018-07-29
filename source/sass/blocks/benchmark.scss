@@ -1,5 +1,5 @@
 .benchmark {
-  padding: 100px 0;
+  padding: 80px 0 100px 0;
 
   font-family: $montserrat;
   background-color: #E8EEF7;
@@ -8,8 +8,12 @@
   background-size: cover;
   background-position: center top;
 
+  @media screen and (min-width: $mobile-m-width) {
+    padding: 90px 0 105px 0;
+  }
+
   @media screen and(min-width: $tablet-width) {
-    padding: 110px 0;
+    padding: 100px 0 130px 0;
     background-image: url('../img/benchmark/BNMRK_bck_foto_1024.jpg');
   }
   @media screen and(min-width: $desktop-m-width) {
@@ -21,13 +25,18 @@
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     text-align: center;
     font-size: 26px;
     line-height: 29px;
     font-weight: 400;
     color: $black-head;
+
+    @media screen and (min-width: $mobile-m-width) {
+      font-size: 30px;
+      line-height: 37px;
+    }
 
     @media screen and(min-width: $tablet-width) {
       font-size: 30px;
@@ -38,12 +47,17 @@
 
   &__content {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 320px;
 
     font-size: 15px;
     line-height: 20px;
     font-weight: 400;
     color: $black;
     text-align: center;
+
+    @media screen and (min-width: $tablet-width) {
+      max-width: 600px;
+    }
+
   }
 }

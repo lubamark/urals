@@ -1,8 +1,18 @@
 .section {
-  padding: 210px 0 60px 0;
+  padding: 220px 0 70px 0;
   background-size: 63px 46px, cover;
   background-repeat: no-repeat, no-repeat;
-  background-position: center 100px,top left;
+  background-position: center 105px,top left;
+
+  @media screen and (min-width: $mobile-m-width) {
+    padding-top: 230px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 200px;
+    padding-bottom: 105px;
+    background-position: center 90px,top left;
+  }
 
   &--grey {
     background-image: url('../img/logo-gray.svg');
@@ -14,6 +24,7 @@
     background-size: 63px 46px, cover;
 
     @media screen and (min-width: $tablet-width) {
+
       background-image: url('../img/logo-white.svg'), url('../img/price/OPD_bck_foto__1024.jpg');
     }
 

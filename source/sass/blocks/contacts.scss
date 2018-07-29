@@ -33,6 +33,15 @@
 
     text-align: center;
     background-color: rgba($white, 0.7);
+
+    @media screen and (min-width: $mobile-m-width) {
+      padding: 45px 10px 40px 10px;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+      margin: auto auto 100px auto;
+    }
+
   }
 
   &__city {
@@ -43,6 +52,10 @@
     line-height: 17px;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media screen and (min-width: $mobile-m-width) {
+      margin-bottom: 25px;
+    }
   }
 
   &__phone {
@@ -54,6 +67,13 @@
     font-weight: 400;
     text-decoration: none;
     color: $black;
+
+    @media screen and (min-width: $mobile-m-width) {
+      font-size: 30px;
+      line-height: 33px;
+      margin-bottom: 40px;
+    }
+
   }
 
   &__email {

@@ -2,10 +2,13 @@
   font-family: $montserrat;
   padding: 100px 0;
 
+  @media screen and(min-width: $tablet-width) {
+    padding: 115px 0;
+  }
+
   &__title {
     max-width: 350px;
     margin: 0 auto 55px auto;
-
 
     font-size: 30px;
     line-height: 33px;
@@ -14,6 +17,7 @@
 
     @media screen and(min-width: $tablet-width) {
       max-width: 100%;
+      margin-bottom: 78px;
     }
   }
 

@@ -6,6 +6,16 @@
   margin: 30px auto 40px auto;
   justify-content: space-between;
 
+  @media screen and (min-width: $mobile-m-width) {
+    justify-content: space-around;
+    margin: 45px auto 40px auto;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 40px auto;
+    max-width: 500px;
+  }
+
   &__link{
     svg {
       fill: $grey-dark;

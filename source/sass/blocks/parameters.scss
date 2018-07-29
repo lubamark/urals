@@ -1,5 +1,13 @@
 .parameters {
-  font-family: $montserrat;
+  @media screen and(min-width: $mobile-m-width) {
+    padding-top: 230px;
+  }
+
+  @media screen and(min-width: $tablet-width) {
+    padding-top: 240px;
+    padding-bottom: 60px;
+    background-position: center 125px,top left;
+  }
 
   &__title {
     margin: 0;
@@ -18,7 +26,7 @@
     }
 
     @media screen and(min-width: $tablet-width) {
-      margin-bottom: 40px;
+      margin-bottom: 65px;
     }
   }
 
@@ -38,9 +46,8 @@
 
   &__item {
     position: relative;
-
-    min-height: 195px;
-    padding: 30px 0 30px 80px;
+    padding: 30px 0 30px 75px;
+    max-width: 300px;
 
     font-size: 20px;
     line-height: 24px;
@@ -57,7 +64,7 @@
 
     }
     span {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       color: $grey-text;
     }
@@ -94,10 +101,16 @@
       display: none;
     }
     &:nth-child(n + 3) {
+      min-height: 195px;
+      padding-top: 45px;
       font-size: 30px;
       line-height: 37px;
       span {
         margin-bottom: 17px;
+      }
+
+      small {
+        margin-top: 25px;
       }
       &:last-child::after {
         display: none;
@@ -111,13 +124,23 @@
       }
     }
     @media screen and(min-width: $tablet-width) {
-      max-width: 320px;
       flex-basis: 50%;
-      min-height: 223px;
 
-      &:nth-child(2n + 1) {
-        margin-right: 20px;
+
+      &:nth-child(1),
+      &:nth-child(2){
+        min-height: 195px;
       }
+
+      &:nth-child(n + 3) {
+        min-height: 223px;
+        padding-top: 38px;
+
+        small {
+          margin-top: 20px;
+        }
+      }
+
       &--contract,
       &--export {
         background-position: 0 60px;

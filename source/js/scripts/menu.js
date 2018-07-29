@@ -3,6 +3,7 @@
 $(document).ready(function () {
   var link = $('.js-scroll-link');
   var windowWidth = $(window).width();
+  var lastTimeout;
 
   function closeMenu () {
     $('.js-nav-toggle').addClass('_close');
@@ -18,7 +19,7 @@ $(document).ready(function () {
     $('.js-scroll-menu').toggleClass('_closed');
     $('body').toggleClass('_menu-mobile');
   }
-  var lastTimeout;
+
   function debounce (fun, interval) {
     if (lastTimeout) {
       clearTimeout(lastTimeout);
@@ -45,9 +46,7 @@ $(document).ready(function () {
   });
 
   function onScroll(){
-
     var scrollPos = $(document).scrollTop();
-
     link.each(function () {
       var currLink = $(this);
       var refElement = $('[data-id='+currLink.attr("href").substring(1)+']');
@@ -67,7 +66,7 @@ $(document).ready(function () {
   }
 
   function menuClick(win) {
-    if(win <= 1024) {
+    if(win < 1024) {
       $(document).off("scroll.menu", onScroll);
       link.on('click', function () {
         closeMenu();
@@ -105,7 +104,7 @@ $(document).ready(function () {
     var target = window.location.hash,
       $target = $('[data-id="'+target.substring(1)+'"]');
     if($target.length > 0) {
-      if(windowWidth <= 1024) {
+      if(windowWidth < 1024) {
           $('html, body').stop().animate({
             'scrollTop': $target.offset().top
           }, 500, function () {
@@ -116,11 +115,7 @@ $(document).ready(function () {
         }, 500, function () {
         });
       }
-
     }
-
-
-
   });
 
   $(window).scroll(function() {
@@ -144,13 +139,20 @@ $(document).ready(function () {
     windowWidth = $(window).width();
     menuClick(windowWidth);
   });
-});
 
-$('.js-down-button').click(function () {
-  var target = this.hash,
-    $target = $('[data-id="'+target.substring(1)+'"]');
-  $('html, body').stop().animate({
-    'scrollTop': $target.offset().top - 98
-  }, 500, function () {
+  $('.js-down-button').click(function () {
+    var target = this.hash,
+      $target = $('[data-id="'+target.substring(1)+'"]');
+    if (windowWidth > 1024) {
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top - 98
+      }, 500);
+    } else {
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 500);
+    }
   });
 });
+
+

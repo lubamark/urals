@@ -78,7 +78,8 @@
 
     @media screen and (min-width: $tablet-width) {
       order: 3;
-      margin-left: 25px;
+      margin-left: 35px;
+      margin-right: 0;
     }
   }
 
@@ -110,7 +111,7 @@
     flex-basis: 100%;
 
     @media screen and (min-width: $tablet-width) {
-      flex-basis: 758px;
+      flex-basis: 740px;
     }
   }
 }
