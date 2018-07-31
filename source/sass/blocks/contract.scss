@@ -6,7 +6,8 @@
   right: 0;
   margin-bottom: -100px;
 
-  min-height: 640px;
+  height: 100vh;
+  min-height: 570px;
   padding-top: 103px;
 
   font-family: $montserrat;
@@ -15,28 +16,45 @@
   background-position: top center;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: $tablet-width) {
-    min-height: 768px;
-    background-image: url('../img/web_boat_cover_middle.jpg');
+  .container {
+    position: relative;
+    margin-top: -50px;
+    height: calc(100% - 47px);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  @media screen and(min-width: $mobile-m-width) {
+    min-height: 520px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    background-image: url('../img/web_boat_cover_middle.jpg');
+    min-height: 550px;
     .container {
       max-width: 940px;
     }
   }
-  @media screen and (min-width: $desktop-width) {
-    min-height: 813px;
-  }
 
-  @media screen and (min-width: $desktop-l-width) {
-    min-height: 940px;
+  @media screen and (min-width: $desktop-width) {
+    min-height: 570px;
     background-image: url('../img/web_boat_cover.jpg');
   }
 
+  @media screen and (min-width: $desktop-m-width) {
+  background-image: url('../img/web_boat_cover.jpg');
+}
+
+  @media screen and (min-width: $desktop-l-width) {
+    background-image: url('../img/web_boat_cover.jpg');
+  }
 
   &::after {
     content: '';
     position: absolute;
-    z-index: -10;
+    z-index: 0;
     top: 0;
     left: 0;
 
@@ -73,7 +91,8 @@
   }
 
   &__title {
-    margin: 80px auto;
+    margin: auto auto 80px auto;
+
     width: 220px;
 
     font-size: 26px;
@@ -84,22 +103,18 @@
 
     @media screen and (min-width: $mobile-m-width) {
       width: 100%;
-      margin: 140px 0 100px 0;
+      margin: auto 0 100px 0;
     }
 
     @media screen and (min-width: $tablet-width) {
-      margin: 210px 0 110px 0;
       font-size: 40px;
       line-height: 44px;
-    }
-
-    @media screen and (min-width: $desktop-l-width) {
-      margin-top: 270px;
     }
   }
 
   &__subtitle {
-    margin-bottom: 70px;
+
+    margin-bottom: auto;
 
     font-family : $montserrat;
     font-weight: 400;
@@ -110,19 +125,7 @@
     color: $white;
 
     @media screen and (min-width: $mobile-m-width) {
-      margin-bottom: 95px;
-    }
-
-    @media screen and (min-width: $tablet-width) {
-      margin-bottom: 130px;
-    }
-
-    @media screen and (min-width: $desktop-width) {
-      margin-bottom: 165px;
-    }
-
-    @media screen and (min-width: $desktop-l-width) {
-      margin-bottom: 225px;
+      margin-bottom: auto;
     }
   }
 
@@ -131,7 +134,7 @@
     z-index: 10;
 
     display: block;
-    margin: 0 auto;
+    margin: auto auto 40px auto;
     width: 62px;
     height: 57px;
 
@@ -152,6 +155,4 @@
       }
     }
   }
-
-
 }

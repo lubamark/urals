@@ -90,14 +90,14 @@
     }
 
     @media screen and (min-width: $mobile-m-width) {
-      padding: 30px 0 30px 80px;
+      padding: 30px 0 30px 75px;
 
     }
 
     @media screen and (min-width: $tablet-width) {
       flex-basis: 50%;
       margin-bottom: 40px;
-      padding: 30px 0 42px 80px;
+      padding: 30px 0 42px 75px;
       min-height: 0;
 
       background-position: 0 25px;
